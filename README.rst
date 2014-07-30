@@ -11,5 +11,10 @@ Install virtualenv
 Available states
 ----------------
 
+.. contents::
+    :local:
+
 ``virtualenv``
-    Installs virtualenv.
+--------------
+
+Installs virtualenv.
