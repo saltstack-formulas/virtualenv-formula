@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
+{% set os_family_map = salt['grains.filter_by']({
+    'Debian': {
+        'pkg': 'python-virtualenv',
+    },
+    'RedHat': {
+        'pkg': 'python-virtualenv',
+        },
+    'Gentoo': {
+        'pkg': 'dev-python/virtualenv',
+        },
+}, merge=salt['pillar.get']('virtualenv:lookup')) %}
+
+{% set virtualenv = salt['pillar.get'](
+        'virtualenv',
+        default=os_family_map,
+        merge=True
+    )
+%}

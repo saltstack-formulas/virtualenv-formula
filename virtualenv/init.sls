@@ -1,5 +1,6 @@
-{% from "virtualenv/package-map.jinja" import virtualenv with context %}
+# -*- coding: utf-8 -*-
+# vim: ft=sls
 
-virtualenv:
-  pkg.installed:
-    - name: {{ virtualenv.pkg }}
+include:
+    - virtualenv.install
+    - virtualenv.config

@@ -1,0 +1,19 @@
+virtualenv:
+    projects:
+        mysite1:
+            enabled: False # Will remove the /opt/django/mysite folder (enabled: True, by default)
+                           # This variable is OPTIONAL
+            path: /opt/django/mysite
+            user: user1   # default root
+            group: group1 # default root
+            mode: 755     # default 755
+            find_links: True
+            requirements: salt://folder/requirements.txt
+            pip_exists_action: s
+            no_chown: True
+            pip_pkgs:
+                - gunicorn
+                - setproctitle
+                - Django==1.11.3
+            env_vars:
+                PATH_VAR: '/usr/local/bin/'

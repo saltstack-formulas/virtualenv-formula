@@ -1,7 +1,7 @@
 virtualenv
 ==========
 
-Install virtualenv
+Install and deploy virtualenv
 
 .. note::
 
@@ -17,4 +17,12 @@ Available states
 ``virtualenv``
 --------------
 
-Installs virtualenv.
+Meta-State.
+
+``install``
+-----------
+Install virtualenv.
+
+``config``
+----------
+Deploy all the virtualenv.
