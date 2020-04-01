@@ -1,9 +1,9 @@
 virtualenv:
-    projects:
+    project:
         mysite1:
             enabled: False # Will remove the /opt/django/mysite folder (enabled: True, by default)
                            # This variable is OPTIONAL
-            path: /opt/django/mysite
+            name: /opt/django/mysite
             user: user1   # default root
             group: group1 # default root
             mode: 755     # default 755
